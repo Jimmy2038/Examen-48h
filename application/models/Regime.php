@@ -9,6 +9,11 @@ class Regime extends CI_Model {
         $query = $this->db->query($sql);
     }
 
+    public function insertRegimeUser($idUser,$idRegime,$duree,$prix){
+        $sql = "INSERT INTO `regimeUser`(`idUser`, `idRegime`, `duree`,`prix`) VALUES (%s,%s,%s,%s)";
+        $sql = sprintf($sql,$idUser,$idRegime,$duree,$prix);
+        $query = $this->db->query($sql);
+    }
     public function getAllRegime()
     {
       $req = "SELECT * FROM regime";
@@ -30,6 +35,11 @@ class Regime extends CI_Model {
       $req = sprintf($req,$idObjectif);
       $query = $this->db->query($req);
       return $query->row();
+    }
+
+    public function getRegimeByObjectif($idObjectif){
+        $query = $this->db->get_where('regime',array('idObjectif'=>$idObjectif));
+        return $query->result();
     }
   
     // public function addObjectifUser($idObjectif,$idUser,$poidsCible){

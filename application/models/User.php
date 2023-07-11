@@ -26,6 +26,12 @@ class User extends CI_Model {
         $this->db->update('infoUtilisateur', ['solde' => $solde]);
     }
 
+    public function getUserById($idUser){
+        $this->db->where('idUser', $idUser);
+        $res = $this->db->get('user');
+        return $res->row();
+    }
+
     public function getSolde($idUser) {
         $this->db->select('solde');
         $this->db->where('idUser', $idUser);

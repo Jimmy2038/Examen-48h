@@ -32,4 +32,11 @@ class InfoUser extends CI_Model {
     return $query->row();
   }
 
+
+  public function getUserById($idUser){
+    $this->db->where('idUser', $idUser);
+    $res = $this->db->get('infoUtilisateur');
+    return $res->row();
+  }
+  
 }
