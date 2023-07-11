@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'sql106.infinityfree.com',
-	'username' => 'epiz_33550048',
-	'password' => 'I5LUKxcrZfkmOe',
-	'database' => 'epiz_33550048_exam',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => 'root',
+	'database' => 'exam',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -2,37 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Loging_admin</title>
 
-    <link rel="stylesheet" href="<?php echo base_url("assets/bootstrap/css/bootstrap.min.css")?>">
-    <link rel="stylesheet" href="<?php echo base_url("assets/fonts/ionicons.min.css") ?>">
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/Login-Form-blue-Gradient-Blue-gradient-login-form.css") ?>">
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/Login-Form-blue-Gradient.css") ?>">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="<?php echo base_url('vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="<?php echo base_url('assets/css/sb-admin-2.min.css') ?>" rel="stylesheet">
+
 </head>
 
-<body>
-    <section>
-        <div class="lgp-hd">
-            <h2><strong>WELCOME TO YOUR REGISTRE PAGE</strong><br></h2>
-            <h5><strong>LOGIN TO SEE YOUR PRINTING INFO</strong><br></h5>
-        </div>
-        <div class="container login-cont">
-            <div class="row">
-                <div class="col-10 col-sm-6 col-md-4 col-lg-4 offset-1 offset-sm-3 offset-md-4 offset-lg-4 login-col"><i class="icon ion-lock-combination"></i>
-                    <form class="login-form" method="post" action="<?php echo base_url('index.php/UserC/signup')?>">
-						<div class="form-group mb-3"><input class="form-control form-control-lg lg-frc" type="text" name="nom" required="" placeholder="Nom"></div>
-                        <div class="form-group mb-3"><input class="form-control form-control-lg lg-frc" type="email" name="mail" required="" placeholder="Mail"></div>
-                        <div class="form-group mb-3"><input class="form-control form-control-lg lg-frc" type="password" name="mdp" required="" placeholder="Enter Password"></div>
-                        
-                        <div class="form-group mb-3"><button class="btn btn-light btn-lg login-btn" type="submit"><strong>Register</strong></button></div>
-                    </form>
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-3 d-none d-lg-block"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                    </div>
+                                    <form class="user" method="post" action="<?php echo base_url('index.php/UserC/signup')?>" >
+										<div class="form-group">
+                                            <input type="text" class="form-control form-control-user"
+                                                
+                                                placeholder="Enter Nom" name="nom" required>
+                                        </div>
+
+										<div class="form-group">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Enter Email Address..." name="mail" required>
+                                        </div>
+
+										<div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Password" name="mdp" required>
+                                        </div>
+                                        <!-- <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div> -->
+                                        <input type="submit"  class="btn btn-primary btn-user btn-block" value="Next">
+                                            
+                                        <hr>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="<?php echo base_url('index.php/UserC/loginUser')?>">Login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
         </div>
-    </section>
-    <script src="<?php echo base_url("assets/bootstrap/js/bootstrap.min.js")?> "></script>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?php echo base_url('vendor/jquery/jquery.min.js')?>"></script>
+    <script src="<?php echo base_url('vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="<?php echo base_url('vendor/jquery-easing/jquery.easing.min.js')?>"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="<?php echo base_url('js/sb-admin-2.min.js')?>"></script>
+
 </body>
 
 </html>

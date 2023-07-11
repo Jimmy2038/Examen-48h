@@ -18,7 +18,25 @@ class User extends CI_Model {
             'isAdmin' => $isAdmin
         );
         $this->db->set($data);
-        $this->db->insert('User');
+        $this->db->insert('user');
     }
+
+    public function updateSolde($idUser, $solde) {
+        $this->db->where('idUser', $idUser);
+        $this->db->update('infoUtilisateur', ['solde' => $solde]);
+    }
+
+    public function getSolde($idUser) {
+        $this->db->select('solde');
+        $this->db->where('idUser', $idUser);
+        $query = $this->db->get('infoUtilisateur');
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
+            return $row->solde;
+        } else {
+            return 0;
+        }
+    }
+
 }
 ?>
